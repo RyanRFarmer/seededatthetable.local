@@ -352,6 +352,34 @@ body.home li.noborderleft a {
 
 /* 3. Homepage Items */
 
+div.home_bottom_posts .date.time.published {
+   /* top: -5px; */
+}
+
+img.attachment-home-bottom {
+    border-bottom: 4px solid #E26F26;
+    float: left;
+    margin-right: 15px;
+    padding: 15px 0 0;
+}
+
+div.home-bottom .entry {
+    margin-bottom: 1rem;
+    min-height: 140px;
+}
+
+div#content div.home-bottom h2 {
+    padding: 20px 70px 10px;
+}
+
+div.home-bottom p.month {
+    padding-top: 5px;
+}
+
+.home_bottom_posts .post-comments {
+    top: 23px;
+}
+
 /* 4. Content Styling */
 div#content h2 a{
     font-family: 'sofia_pro_lightregular';

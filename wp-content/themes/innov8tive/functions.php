@@ -39,7 +39,7 @@ add_image_size( 'home-bottom', 150, 225, true );
 add_image_size( 'home-middle', 265, 150, true );
 add_image_size( 'home-mini', 80, 80, true );
 add_image_size( 'home-supermini', 65, 45, true );
-add_image_size( 'primary-sidebar', 290, 150, true );
+add_image_size( 'primary-sidebar', 330, 150, true );
 
 /** Create additional color style options */
 add_theme_support( 'genesis-style-selector', array( 'innov8tive-yellow' => 'Yellow & Orange', 'innov8tive-turquoise' => 'Turquoise & Red' ) );
