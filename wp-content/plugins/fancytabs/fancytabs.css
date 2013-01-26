@@ -1,0 +1,45 @@
+@charset "UTF-8";
+/* =FancyTabs
+-------------------------------------------------------------- */
+#fancy-tabs {
+	display: block;
+	line-height: 22px;
+	background: #D8D8D8;
+	padding: 5px 10px 3px 10px;
+	border-bottom: #999 1px solid;	
+	border-top-right-radius: 8px;
+	border-top-left-radius: 8px;
+	-moz-border-radius-topleft: 8px;
+	-moz-border-radius-topright: 8px;
+}
+#fancy-tabs ul {
+	text-align: left;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+#fancy-tabs ul li{
+	padding: 0;
+	margin: 0;
+	display: inline-block;
+}
+#fancy-tabs ul li a {
+	font-family:Tahoma, Geneva, sans-serif;	
+	display: block;
+	cursor: pointer;
+	text-decoration: none;
+	padding: 5px 25px;
+	margin: 5px 2px 0 2px;
+	color: #000;
+	font-size: 14px;
+	background: #DDD;
+	border:#999 1px solid;
+	border-radius: 8px;
+	border-radius: 8px;
+	-moz-border-radius: 8px;
+	-moz-border-radius: 8px;
+}
+#fancy-tabs ul li a:hover {	
+	color: #FFF;
+	background: #333 !important;
+}

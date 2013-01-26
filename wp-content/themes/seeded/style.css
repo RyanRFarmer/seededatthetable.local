@@ -1,0 +1,839 @@
+/*
+    Theme Name: Seeded
+    Theme URI: http://seededatthetable.com/
+    Description: A Genesis Custom Child Theme.
+    Author: Nikki Gladd
+    Author URI: http://www.seededatthetable.com/
+ 
+    Version: 1.0.
+ 
+    Tags: custom-background, custom-header, custom-homepage, custom-category-template, color-options, featured-images, threaded-comments, two-or-three columns
+ 
+    Template: genesis
+    Template Version: 1.8.0
+ 
+    License: GNU General Public License v2.0 (or later)
+    License URI: http://www.opensource.org/licenses/gpl-license.php
+*/
+
+@import url(../genesis/style.css);
+
+
+/* table of contents
+
+1. General
+2. Navigation
+3. Homepage Items
+4. Content Styling
+5. Slider
+6. Footer
+7. Recipe Box
+9. Tabs
+10. Sidebar
+11. Buttons
+
+*/
+
+/* 1. General */
+
+@font-face {
+    font-family: 'sofia_pro_lightregular';
+    src: url('fonts/fonts/SofiaProLight-webfont.eot');
+    src: url('fonts/SofiaProLight-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/SofiaProLight-webfont.woff') format('woff'),
+         url('fonts/SofiaProLight-webfont.ttf') format('truetype'),
+         url('fonts/SofiaProLight-webfont.svg#sofia_pro_lightregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'BloklettersViltstift';
+    src: url('fonts/Blokletters-Viltstift-webfont.eot');
+    src: url('fonts/Blokletters-Viltstift-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/Blokletters-Viltstift-webfont.woff') format('woff'),
+         url('fonts/Blokletters-Viltstift-webfont.ttf') format('truetype'),
+         url('fonts/Blokletters-Viltstift-webfont.svg#BloklettersViltstift') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+body{
+	background: url('images/bg.png') fixed #bcd0d0;
+    color: #505050;
+}
+
+.clearfix:after {
+   content: " "; /* Older browser do not support empty content */
+   visibility: hidden;
+   display: block;
+   height: 0;
+   clear: both;
+}
+
+p {
+    color:#505050;
+
+}
+
+div#header {
+    display: none;
+}
+
+div#home .post p, .entry-content p {
+    font-size: .8em;
+    margin-bottom: 1.625rem;
+    line-height: 1.625em;
+}
+
+#wrap {
+	width:1050px;
+    margin: 0 auto;
+    position: relative;
+    background: #fff;
+}
+
+a, a:visited {
+    color:#e36d0b;
+}
+
+span.post-comments a {
+    text-decoration: none;
+}
+
+#logo_banner {
+    width: 1050px;
+    margin: 0 auto;
+    position: relative;
+    clear: both;
+    z-index: 1;
+}
+
+#logo{
+    float:left;
+    position: absolute;
+    top: -35px;
+}
+
+a#logo {
+
+}
+
+#top_banner {
+    margin: 35px 42px 35px 0;
+    min-height: 90px;
+}
+
+#top_banner img {
+    float:right;
+}
+
+#inner {
+    padding: 0 45px;
+}
+
+.sidebar {
+    width: 330px;
+}
+
+#content {
+    padding: 0;
+}
+
+#content-sidebar-wrap {
+    padding: 40px 0;
+}
+
+div#home .widget-wrap div#home_post_date p {
+    margin-bottom: 0;
+}
+
+div#home .widget-wrap div#home_post_date p.day {
+    font-size: 1.2em;
+    line-height: 0.8em;
+    padding-bottom: 21px;
+}
+
+div#home .widget-wrap div#home_post_date p.month {
+    font-size: 0.9em;
+}
+
+.post-comments {
+background: url("images/comment_icon.png") no-repeat scroll left center transparent;
+    float: right;
+    font-family: 'sofia_pro_lightregular';
+    font-style: normal;
+    font-weight: normal;
+    padding-left: 22px;
+    position: absolute;
+    right: 0;
+    top: 18px;
+}
+
+span.date {
+    position: absolute;
+    left: -15px;
+    top: 15px;
+    width: 66px;
+    background: url('images/date_bg.png') no-repeat top;
+    text-align: center;
+   
+}
+
+#authorship {
+    padding-left: 60px;
+}
+
+.author a {
+    text-decoration: none;
+}
+
+.month {
+    color: #F5B818;
+    font-family: 'sofia_pro_lightregular';
+    font-size: 1em;
+    font-style: normal;
+    font-weight: normal;
+    padding-left: 3px;
+    text-transform: uppercase;
+}
+
+.day {
+  color: #FFFFFF;
+    font-family: 'BloklettersViltstift';
+    font-size: 1.4em;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1em;
+    margin: 0;
+    padding-bottom: 15px;
+    padding-left: 3px;
+
+}
+
+
+.post {
+    position: relative;    
+}
+
+div#home div.post p img, div.entry-content img {
+    border-bottom: 5px solid #E26F26;
+}
+
+#seeded_share {
+    position: absolute;
+    background: url('images/share_bg.png') no-repeat top;
+    height: 300px;
+    width: 49px;
+    margin-left: -24px;
+    top: 170px;
+    text-align: center;
+    
+}
+
+#seeded_share p{
+color: #45738F;
+    font-size: 0.7em;
+    line-height: 1em;
+    padding: 10px 0 20px;
+}
+
+.custom_images {
+    text-align: center;
+    margin-left: 6px;
+}
+.custom_images a {
+    margin-bottom: -5px;
+
+}
+
+.categories {
+    background: url('images/category_tag.png') no-repeat left;
+    padding-left: 25px;
+    font-size: .9em;
+}
+
+h1#title {
+    display: none;
+}
+
+
+#header {
+    min-height: 0!important;
+    border-bottom:0;
+    overflow: hidden;
+    padding-bottom:0;
+}
+#title-area {
+    padding:0;
+    }
+
+
+#description {
+    display: none;
+ }
+
+
+.post-info {
+     background: url('images/custom_border.png') repeat-x bottom;
+padding-bottom: 15px;
+}
+
+.stickit {
+    margin-left: 660px;
+    position: fixed;
+    top: 0;
+}
+
+.stickit-end {
+    bottom: 40px;
+    position: absolute;
+    right: 0;
+}
+
+
+.content-sidebar #content, .sidebar-content #content, #title-area {
+    width: 585px;
+}
+
+/* 2. Navigation */
+
+#nav {
+       background:url('images/nav_bg.png') repeat-x bottom #76933c;
+       border-top: none;
+       border-bottom: 5px solid #e36d0b;
+}
+
+
+.menu-primary a, .menu-secondary a, #header .menu a  {
+    border-right: 1px solid #5f7531;
+    border-left: 1px solid #98a975;
+    color: #fff;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 2px #5c7033;
+    font-family: 'sofia_pro_lightregular';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.15em;
+    padding: 10px 32px;
+}
+
+
+.menu-primary li a:active, .menu-primary li a:hover, .menu-primary .current_page_item a, .menu-primary .current-cat a, .menu-primary .current-menu-item a, .menu-secondary li a:active, .menu-secondary li a:hover, .menu-secondary .current_page_item a, .menu-secondary .current-cat a, .menu-secondary .current-menu-item a, #header .menu li a:active, #header .menu li a:hover, #header .menu .current_page_item a, #header .menu .current-cat a, #header .menu .current-menu-item a 
+{
+    background: url('images/nav_over.png');
+    color: #fff;
+}
+
+.menu-primary li {
+    float: right;
+}
+
+li.noborderright a{
+    border-right: none!important;
+}
+
+li.noborderleft a{
+    border-left: none!important;
+}
+
+body.home li.noborderleft a {
+    background: none;
+}
+
+.genesis-nav-menu.menu-primary, .genesis-nav-menu.menu-secondary {
+    border-bottom:0;
+}
+
+
+/* 3. Homepage Items */
+
+/* 4. Content Styling */
+div#content h2 a{
+    font-family: 'sofia_pro_lightregular';
+    font-style: normal;
+    font-weight: normal;
+    color: #e36d0b;
+    line-height: 1em;
+}
+
+div#content h2{
+        background: url('images/custom_border.png') repeat-x top;
+        padding-left: 60px;
+   padding-right: 60px;
+    padding-top:10px; 
+    margin-bottom: 3px;
+}
+
+p.post-info {
+    display: none;
+}
+
+div#home_post_date {
+    background: url("images/custom_border.png") repeat-x scroll center bottom transparent;
+    padding-bottom: 15px;
+    padding-left: 60px;
+    padding-top: 5px;
+}
+
+h1.entry-title {
+     font-family: 'sofia_pro_lightregular';
+    font-style: normal;
+    font-weight: normal;
+    color: #e36d0b;
+    padding:10px 60px 0 60px;
+     background: url('images/custom_border.png') repeat-x top;
+    margin-bottom: 3px;
+    line-height: 1em;
+    font-size: 1.85rem;
+}
+
+h2.entry-title {
+    background: url('images/custom_border.png') repeat-x top;
+    padding-top:10px; 
+    margin-bottom: 3px;
+    padding-right: 60px;
+
+}
+
+.author a{
+    color:#77933d;
+    font-family: 'BloklettersViltstift';
+    font-style: normal;
+    font-weight: normal;;
+    font-size: 1em;
+}
+
+.sidebar .widget {
+    border-bottom:none;
+}
+
+div.home-bottom h2 a{
+    font-size: 0.7em;
+}
+
+div.home-bottom p {
+    font-size: 0.8em;
+    line-height: 1.5em;
+}
+
+div.home-bottom .entry {
+    margin-bottom: 1rem;
+}
+
+/* 5. Slider */
+
+/* 6. Footer */
+#footer {
+    background:url('images/footer_bg.png') repeat-x top #76933c;
+    border-top: 5px solid #e36d0b;
+    margin-bottom: 33px;
+    color: #fff;
+    font-family: 'sofia_pro_lightregular';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1em;
+    position: relative;
+}
+
+#footer .wrap {
+    padding:0;
+    border-top: 0 none;
+    overflow: normal;
+}
+
+#footer a {
+    text-decoration: none;
+}
+
+#footer_logo {
+    bottom: -33px;
+    position: absolute;
+    right: 22px;
+    z-index: 100;
+}
+
+ul#footer_social {
+    list-style: none;
+    float: left;
+    margin: 10px 0 0 10px;
+
+}
+
+ul#footer_social li {
+    float: left;
+    margin-right: 17px;
+}
+
+ul#footer_nav {
+    float: right;
+    list-style: none;
+    margin-right: 156px;
+}
+
+ul#footer_nav li:first-child {
+    border-left: none;
+}
+
+#footer_nav li {
+float: left;
+border-right:1px solid #5e7630;
+padding:15px 13px; 
+border-left: 1px solid #91a963;
+
+}
+
+#footer_nav li a, #footer_nav li a:visited {
+    color: #fff;
+    text-transform: uppercase;
+
+}
+
+#footer_nav li a:hover {
+    color:#F5B818;
+}
+
+#copyright {
+    float: left;
+    margin-top: 14px;
+}
+
+/* 7. Recipe Box */
+
+#zlrecipe-container ul {
+    font-size: 0.9em;
+ }
+
+.zlrecipe-container-border {
+    -webkit-box-shadow: 0px 0px 10px rgba(50, 50, 50, 0.25);
+-moz-box-shadow:     0px 0px 10px rgba(50, 50, 50, 0.25);
+box-shadow:          0px 0px 10px rgba(50, 50, 50, 0.25);
+        font-family: 'BloklettersViltstift';
+    font-style: normal;
+    font-weight: normal;
+    font-size: .9em;
+}
+
+div#zlrecipe-container p{
+    font-size: .8em;
+}
+
+.entry-content {
+    overflow:inherit;
+}
+
+#zlrecipe-container div#zlrecipe-title {
+    color: #4d4d4d;  
+        font-family: 'BloklettersViltstift';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.5em;
+}
+
+#zlrecipe-container #zlrecipe-title {
+    padding-bottom: 15px;
+}
+
+#zlrecipe-container .b-b {
+    border-bottom:0 none!important;
+    background: url('images/pink_border.png') repeat-x bottom;
+    margin-bottom: 10px!important;
+}
+
+.zl-recipe-link a.butn-link {
+    background: url("images/recipe_save.png") no-repeat!important;
+    cursor: pointer;
+    display: block;
+    height: 25px!important;
+    width: 25px!important;
+}
+
+#zlrecipe-container .zl-recipe-link {
+    margin-top: 0!important;
+}
+
+#zlrecipe-container .zlrecipe-print-link .butn-link {
+    background: url("images/recipe_print.png") no-repeat!important;
+    height: 25px!important;
+    width: 25px!important;
+    padding: 0!important;
+}
+
+#zlrecipe-container .zlrecipe-print-link {
+    margin-top: 0!important;
+    padding-left: 7px!important;
+}
+
+#zlrecipe-container p {
+    line-height: 1.6em!important;
+}
+
+#zlrecipe-container ul {
+    padding: 0!important;
+}
+
+
+#zlrecipe-container .zlmeta {
+   font-family: 'sofia_pro_lightregular';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.3em!important;
+}
+
+.zlmeta p {
+    margin: 0!important;
+}
+
+
+#zlrecipe-container #zlrecipe-ingredients-list .ingredient-label, #zlrecipe-container #zlrecipe-instructions-list .instruction-label{
+        color:#f0677b!important;
+        display: block;
+        margin-top: 15px;
+}
+
+#zlrecipe-container .img-desc-wrap {
+    background:url('images/blue_border.png') repeat-x bottom #ffffff!important;
+    padding-top: 1px;
+}
+
+#zlrecipe-container .img-desc-wrap #zlrecipe-summary {
+    padding: 5px 0!important;
+}
+
+#zlrecipe-container #zlrecipe-instructions-list .instruction-label {
+    left:0px!important;
+}
+
+#zlrecipe-container ul {
+    background:url('images/blue_border.png') repeat-x bottom!important;
+    margin: 0!important;
+    padding: 15px!important;
+}
+
+#zlrecipe-container .zlmeta {
+    background:url('images/blue_border.png') repeat-x bottom!important;
+    padding-bottom: 15px!important;
+}
+
+#zlrecipe-container a {
+    color:#709ed6;
+}
+
+p#zlrecipe-notes {
+        color:#f0677b!important;
+}
+
+/* 8. Tabs */
+
+div.wp-tabs {
+    background: url('images/tabs_bg.png') no-repeat top!important;
+
+}
+
+div.wp-tabs div.ui-tabs {
+    padding:0!important;
+    margin: 0 30px!important;
+    border: 1px solid #b9b9b9!important;
+    border-radius: 15px 15px 15px 15px !important;
+    background: #fff!important;
+    min-height: 232px;
+}
+
+.ui-widget-content {
+    border: none!important;
+}
+
+.ui-tabs-panel {
+    padding: 1em 8px!important;
+}
+
+.ui-widget-header {
+    background: url('images/custom_border.png') repeat-x bottom!important;
+    border: none!important;
+}
+
+.sidebar.widget-area ul li {
+    border:none!important;
+    background: none!important;
+}
+
+.sidebar.widget-area ul li a{
+    color: #eea87b;  
+        font-family: 'BloklettersViltstift';
+    font-style: normal;
+    font-weight: normal;
+    font-size: .8em;
+    padding: 10px!important;
+}
+
+li.ui-state-active a{
+    color:#e26f26!important;
+}
+
+.ui-tabs .ui-tabs-nav {
+    margin: 0 5px!important;
+}
+
+#topsocialtab {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.wp-tab-content h2 {
+    color: #76933C;
+    font-family: 'sofia_pro_lightregular';
+    font-size: 1.5em;
+    font-style: normal;
+    font-weight: normal;
+    margin: 0;
+}
+
+.sidebar .widget {
+    margin-bottom: 1.5rem;
+    padding-bottom: 0;
+}
+
+/* 10. Sidebar */
+
+#text-2, #text-8 {
+    text-align: center;
+}
+
+.skyscrapers div.widget {
+    display: inline;
+    float: right;
+}
+
+.skyscrapers {
+    clear: both;
+}
+
+#skyleft {
+    float: left;
+}
+
+#skyright {
+    float: right;
+}
+
+h4.widgettitle {
+    background: url("images/widget_title_bg.png") repeat-x scroll center bottom #77933D;
+    border-bottom: 4px solid #E26F26;
+    color: #FFFFFF;
+    font-family: 'sofia_pro_lightregular';
+    font-size: 1.4em;
+    font-style: normal;
+    font-weight: normal;
+    padding: 5px 10px;
+    text-shadow: 2px 2px 2px #617733;
+    text-transform: uppercase;
+    margin-bottom: 0;
+}
+
+#recipe_box {
+    background: url('images/recipe_box.jpg') no-repeat 35px 10px;
+    text-align: right;
+    padding-right: 10px;
+}
+
+.sidebar p {
+        font-size: 0.9em;
+    }
+
+#recipe_box p {
+    padding:10px 0;
+    margin: 0 0 0 50%; 
+}
+
+.button {
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 15px;
+    background: #e36d0b;
+    font-family: 'BloklettersViltstift';
+    font-style: normal;
+    font-size: .8em;
+    font-weight: normal;
+    text-decoration: none;
+}
+
+#recipe_box .button {
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+#enews_box {
+    padding: 15px;
+}
+
+#enews_box p{
+    margin-bottom:0px;
+}
+
+input#enews {
+    border-radius: 15px 0 0 15px;
+    font-family: 'sofia_pro_lightregular';
+    font-size: 0.9em;
+    font-style: normal;
+    font-weight: normal;
+    padding: 10px 10px 11px;
+    width: 65%;
+}
+
+input#enews_submit {
+    width: 35%;
+    border-radius: 0 15px 15px 0;
+    background: #e36d0b;
+     font-family: 'BloklettersViltstift';
+    font-style: normal;
+    font-size: .8em;
+    font-weight: normal;
+    color: #fff;
+    padding: 10px;
+}
+
+div#sidebar .featuredpost h2 a {
+    font-family: 'sofia_pro_lightregular';
+    font-size: 0.5em;
+    font-style: normal;
+    font-weight: normal;
+    color: #e36d0b;
+}
+
+div#sidebar .featuredpost h2 {
+  padding:10px 55% 15px 10px;
+}
+
+div#sidebar .post {
+        background: url('images/sidebar_featured_bg.png') repeat-x bottom;
+
+}
+
+div#sidebar .featuredpost .entry {
+    margin-bottom: 0;
+}
+
+/* 11. Buttons */
+
+button, input[type="button"], input[type="submit"], .btn {
+    background-color: #e36d0b;
+    border-radius: 15px;
+    box-shadow: none;
+    cursor: pointer;
+    padding: 10px;
+    width: auto;
+    color: #fff;
+    font-family: 'BloklettersViltstift';
+    font-style: normal;
+    font-size: .8em;
+    font-weight: normal;
+}
+
+button:hover, input[type="button"]:hover, input[type="submit"]:hover, .btn:hover, input#enews_submit:hover, a.button:hover {
+    background-color: #76933c;
+    color: #F5B818;
+}
