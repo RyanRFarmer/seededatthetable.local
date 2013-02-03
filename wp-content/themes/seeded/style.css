@@ -28,9 +28,11 @@
 5. Slider
 6. Footer
 7. Recipe Box
-9. Tabs
+8. Tabs
+9. Page Numbers
 10. Sidebar
 11. Buttons
+12. Comments
 
 */
 
@@ -101,8 +103,16 @@ a, a:visited {
     color:#e36d0b;
 }
 
+.wp-smiley {
+    border: medium none !important;
+}
+
 span.post-comments a {
     text-decoration: none;
+}
+
+.commentword {
+    display: none;
 }
 
 #logo_banner {
@@ -124,7 +134,7 @@ a#logo {
 }
 
 #top_banner {
-    margin: 35px 42px 35px 0;
+    margin:30px 37px 30px 0;
     min-height: 90px;
 }
 
@@ -142,10 +152,11 @@ a#logo {
 
 #content {
     padding: 0;
+    margin-top: 20px;
 }
 
 #content-sidebar-wrap {
-    padding: 40px 0;
+    padding: 20px 0;
 }
 
 div#home .widget-wrap div#home_post_date p {
@@ -153,7 +164,7 @@ div#home .widget-wrap div#home_post_date p {
 }
 
 div#home .widget-wrap div#home_post_date p.day {
-    font-size: 1.2em;
+    font-size: 1em;
     line-height: 0.8em;
     padding-bottom: 21px;
 }
@@ -195,10 +206,10 @@ span.date {
 .month {
     color: #F5B818;
     font-family: 'sofia_pro_lightregular';
-    font-size: 1em;
     font-style: normal;
     font-weight: normal;
-    padding-left: 3px;
+    padding-left: 8px;
+    padding-top: 3px;
     text-transform: uppercase;
 }
 
@@ -211,8 +222,13 @@ span.date {
     line-height: 1em;
     margin: 0;
     padding-bottom: 15px;
-    padding-left: 3px;
+    padding-left: 8px;
+}
 
+
+body.single .day {
+    font-size: 1.2em;
+    padding-left: 8px;
 }
 
 
@@ -319,7 +335,7 @@ padding-bottom: 15px;
     font-style: normal;
     font-weight: normal;
     font-size: 1.15em;
-    padding: 10px 32px;
+    padding: 7px 35px;
 }
 
 
@@ -353,23 +369,27 @@ body.home li.noborderleft a {
 /* 3. Homepage Items */
 
 div.home_bottom_posts .date.time.published {
-   /* top: -5px; */
+   top: 20px; 
+}
+
+div#content div.home-bottom h2 a {
+    font-size: 0.85em;
 }
 
 img.attachment-home-bottom {
     border-bottom: 4px solid #E26F26;
     float: left;
-    margin-right: 15px;
-    padding: 15px 0 0;
+    margin: 0 15px 15px 0;
+    padding: 25px 0 0;
 }
 
 div.home-bottom .entry {
     margin-bottom: 1rem;
-    min-height: 140px;
+    min-height: 160px;
 }
 
 div#content div.home-bottom h2 {
-    padding: 20px 70px 10px;
+    padding: 30px 70px 10px;
 }
 
 div.home-bottom p.month {
@@ -377,7 +397,7 @@ div.home-bottom p.month {
 }
 
 .home_bottom_posts .post-comments {
-    top: 23px;
+    top: 34px;
 }
 
 /* 4. Content Styling */
@@ -387,6 +407,7 @@ div#content h2 a{
     font-weight: normal;
     color: #e36d0b;
     line-height: 1em;
+    font-size: 1em;
 }
 
 div#content h2{
@@ -395,6 +416,7 @@ div#content h2{
    padding-right: 60px;
     padding-top:10px; 
     margin-bottom: 3px;
+    font-size:1.6rem; 
 }
 
 p.post-info {
@@ -417,7 +439,7 @@ h1.entry-title {
      background: url('images/custom_border.png') repeat-x top;
     margin-bottom: 3px;
     line-height: 1em;
-    font-size: 1.85rem;
+    font-size: 1.75rem;
 }
 
 h2.entry-title {
@@ -428,12 +450,12 @@ h2.entry-title {
 
 }
 
-.author a{
+.author.vcard a{
     color:#77933d;
     font-family: 'BloklettersViltstift';
     font-style: normal;
     font-weight: normal;;
-    font-size: 1em;
+    font-size: 0.9em;
 }
 
 .sidebar .widget {
@@ -441,7 +463,7 @@ h2.entry-title {
 }
 
 div.home-bottom h2 a{
-    font-size: 0.7em;
+    font-size: 0.8em;
 }
 
 div.home-bottom p {
@@ -451,6 +473,18 @@ div.home-bottom p {
 
 div.home-bottom .entry {
     margin-bottom: 1rem;
+}
+
+
+body.page h1.entry-title {
+    padding-left: 0;
+}
+
+.categories > a {
+    color: #E36D0B;
+    font-family: arial;
+    font-size: 1em;
+    text-decoration: none;
 }
 
 /* 5. Slider */
@@ -559,7 +593,7 @@ div#zlrecipe-container p{
         font-family: 'BloklettersViltstift';
     font-style: normal;
     font-weight: normal;
-    font-size: 1.5em;
+    font-size: 1.4em;
 }
 
 #zlrecipe-container #zlrecipe-title {
@@ -655,11 +689,18 @@ p#zlrecipe-notes {
         color:#f0677b!important;
 }
 
+#zlrecipe-container .heading-four, #zlrecipe-container .h-4 {
+    font-size: 1em!important;
+}
+
 /* 8. Tabs */
 
 div.wp-tabs {
     background: url('images/tabs_bg.png') no-repeat top!important;
+}
 
+.wp-tab-content {
+  font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
 }
 
 div.wp-tabs div.ui-tabs {
@@ -695,7 +736,7 @@ div.wp-tabs div.ui-tabs {
     font-style: normal;
     font-weight: normal;
     font-size: .8em;
-    padding: 10px!important;
+    padding: 8px 14px !important;
 }
 
 li.ui-state-active a{
@@ -725,9 +766,81 @@ li.ui-state-active a{
     padding-bottom: 0;
 }
 
+
+
+/* 9. Page Numbers */
+
+#wp_page_numbers {
+    margin-bottom: 30px;
+}
+
+#wp_page_numbers a {
+    border: none!important;
+}
+
+#wp_page_numbers li a:hover {
+    color: #727272!important;
+}
+
+#wp_page_numbers ul li a{
+    font-family: 'sofia_pro_lightregular';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.2em;
+
+}
+
+#wp_page_numbers ul li a{
+    padding:10px!important;
+     margin: 0 5px;
+}
+
+#wp_page_numbers ul li a span {
+    color: #fff;
+    border-radius: 10px;
+    background: none repeat scroll 0 0 #E36D0B;
+    font-family: 'BloklettersViltstift';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 0.8em;
+    padding:7px!important;
+
+}
+
+#wp_page_numbers ul li a:hover span{
+    background:#76933C;
+    color: #F5B818;
+}
+
+
+#wp_page_numbers li.page_info {
+    display: none!important;
+}
+
+#wp_page_numbers ul {
+    border-top:none!important;
+    width: 100%;
+}
+
+#wp_page_numbers li a:hover {
+    }
+
+
+#wp_page_numbers ul, #wp_page_numbers li, #wp_page_numbers a {
+    line-height: 1em!important;
+}
+
+#wp_page_numbers li.active_page a {
+    background: none repeat scroll 0 0 #E36D0B!important;
+    border:none!important;
+    color: #FFFFFF;
+    border-radius: 10px;
+    padding: 10px;
+}
+
 /* 10. Sidebar */
 
-#text-2, #text-8 {
+#text-2, #text-8, #text-9, #text-10 {
     text-align: center;
 }
 
@@ -777,7 +890,7 @@ h4.widgettitle {
     margin: 0 0 0 50%; 
 }
 
-.button {
+.button, a.button:visited {
     color: #fff;
     padding: 10px 20px;
     border-radius: 15px;
@@ -834,6 +947,7 @@ div#sidebar .featuredpost h2 a {
 
 div#sidebar .featuredpost h2 {
   padding:10px 55% 15px 10px;
+  min-height: 30px;
 }
 
 div#sidebar .post {
@@ -864,4 +978,87 @@ button, input[type="button"], input[type="submit"], .btn {
 button:hover, input[type="button"]:hover, input[type="submit"]:hover, .btn:hover, input#enews_submit:hover, a.button:hover {
     background-color: #76933c;
     color: #F5B818;
+}
+
+/* 12. Comments */
+
+.comment-reply-link {
+    background-color: #e36d0b;
+    border-radius: 10px;
+    box-shadow: none;
+    cursor: pointer;
+    padding: 5px 10px;
+    width: auto;
+    color: #fff;
+    font-family: 'BloklettersViltstift';
+    font-style: normal;
+    font-size: .8em;
+    font-weight: normal;
+    text-decoration: none;
+}
+
+.comment-reply-link:hover {
+        background-color: #76933c;
+    color: #F5B818;
+}
+
+
+.comment-content p {
+    font-size: 0.8em;
+    margin-bottom: 15px;
+}
+
+.comment-meta.commentmetadata a {
+    text-decoration: none;
+    font-size: 0.75em;
+    color:#505050;
+}
+
+.comment-author cite, .comment-author cite a {
+    font-family: 'BloklettersViltstift';
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: none;
+    color:#E36D0B;
+}
+
+.commentmetadata {
+        float: right;
+    }
+.comment-author {
+    float: left;
+    max-width: 320px;
+}
+
+.comment-author cite {
+    font-size: .8em;
+}
+
+
+.comment-list li, .ping-list li {
+    margin-top: 10px;
+
+}
+
+.comment-list li .avatar {
+    margin: 0 1rem 12px 0;
+}
+
+.comment-author-admin {
+    background-color: #e7eddc;
+
+}
+
+.comment-author-admin p, .comment-author-admin cite a {
+
+}
+
+.ping-list, #comments {
+    margin-bottom: 1rem;
+}
+
+h3#reply-title {
+    font-family: 'sofia_pro_lightregular';
+    font-style: normal;
+    font-weight: normal;
 }

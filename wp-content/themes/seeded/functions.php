@@ -85,6 +85,24 @@ if ( !is_page() ) {
     return $post_info;
 }}
 
+add_filter( 'genesis_post_comments_shortcode', 'child_post_comments_shortcode' );
+/**
+ * Amend the post comments shortcode to add extra markup for styling.
+ *
+ * @author Gary Jones
+ * @link   http://code.garyjones.co.uk/style-comment-number/
+ *
+ * @param string $output HTML markup, likely with shortcodes.
+ *
+ * @return string HTML markup.
+ */
+function child_post_comments_shortcode( $output ){
+ 
+    return preg_replace('/#comments"\>(\d+) Comments/', '#comments"><span class="number">${1}</span> <span class="commentword">Comment</span>', $output);
+ 
+}
+
+
 add_filter( 'genesis_post_date_shortcode', 'child_post_date_shortcode', 10, 2 );
 /**
  * Customize Post Date format and add extra markup for CSS targeting.

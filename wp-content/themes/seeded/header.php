@@ -25,7 +25,7 @@ wp_head(); /** we need this for plugins **/
 ?>
 </head>
 <body <?php body_class(); ?>>
-<div id="logo_banner"><a href"/"><img class="clearfix" id="logo" src="/wp-content/themes/seeded/images/seeded_at_the_table_logo.png" /></a>
+<div id="logo_banner"><a href="/"><img class="clearfix" id="logo" src="/wp-content/themes/seeded/images/seeded_at_the_table_logo.png" /></a>
 	<div id="top_banner" class="clearfix">
 <?php if ( ! dynamic_sidebar( 'Top Banner Ad' ) ) :?><?php endif;?>
 </div></div>
