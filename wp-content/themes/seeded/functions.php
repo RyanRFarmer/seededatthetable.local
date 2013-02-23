@@ -195,5 +195,59 @@ genesis_register_sidebar( array(
 
 
 
+function change_default_comment_text($args) {
+    $args['title_reply'] = 'Leave a Comment';
+    return $args;
+}
+add_filter( 'genesis_comment_form_args', 'change_default_comment_text' );
+
 
 add_shortcode('wpbsearch', 'get_search_form'); 
+
+function custom_post_navigation()
+{
+?>
+    <div class="prev_next clearfix">
+        <div class="nav_left">
+            <span class="prev"><?php previous_post_link('%link', '%title'); ?></span> 
+         </div class="nav_right">
+        <div>
+            <span class="next"><?php next_post_link('%link', '%title'); ?></span>
+        </div>
+    </div>
+<?php
+}
+
+add_action('genesis_after_post_content', 'custom_post_navigation');
+
+class CategoryThumbnail_Walker extends Walker_Category {
+
+    // A new element has been stumbled upon and has ended
+    function end_el( &$output, $category, $depth, $args ) {
+        // Output the standard link ending
+        parent::end_el( &$output, $category, $depth, $args );
+
+        // Get one post
+        $posts = get_posts( array(
+            // ...from this category
+            'category' => $category->cat_ID,
+            'numberposts' => 10
+        ) );
+
+        // we'll record the seen images here
+        if ( !isset($this->images_seen) ) $this->images_seen = array();
+
+        foreach ( $posts as $post ) {
+            // Get its thumbnail and append it to the output
+            $featured = get_the_post_thumbnail( $post->ID, 'primary-sidebar', null );
+            // have we already seen this image?
+            if ( in_array($featured, $this->images_seen) ) continue;
+            else {
+                $this->images_seen []= $featured;
+                $output .= $featured;
+                break;
+            }
+        }
+    }
+}
+

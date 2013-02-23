@@ -39,13 +39,18 @@ function innov8tive_home_loop_helper() {
 	}
 	
 	if ( is_active_sidebar( 'home-bottom' ) ) {
+
 	
 		echo '<div id="home-bottom">';
 		
 			genesis_widget_area( 'home-bottom', array( 'before' => '<div class="wiget-area home-bottom">' ) );
+
+
 		
 		echo '</div><!-- end #home-bottom -->';
 		
+		echo '<a href="/blog/" class="more_recepies button">Click here to find more great recipes!</a>';	
+
 	}
 
 }

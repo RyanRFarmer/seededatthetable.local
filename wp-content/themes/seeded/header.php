@@ -23,6 +23,17 @@ do_action( 'genesis_meta' );
 
 wp_head(); /** we need this for plugins **/
 ?>
+
+<script>
+  (function() {
+    var cx = '014112805206070475644:bdvcn6xvneg';
+    var gcse = document.createElement('script'); gcse.type = 'text/javascript'; gcse.async = true;
+    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+        '//www.google.com/cse/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+
 </head>
 <body <?php body_class(); ?>>
 <div id="logo_banner"><a href="/"><img class="clearfix" id="logo" src="/wp-content/themes/seeded/images/seeded_at_the_table_logo.png" /></a>
@@ -42,7 +53,7 @@ do_action( 'genesis_before' );
 <a class="addthis_button_stumbleupon"><img src="/wp-content/themes/seeded/images/share_stumbleupon.png" width="32" height="32" border="0" alt="Stumble This" /></a>
 <a class="addthis_button_twitter"><img src="/wp-content/themes/seeded/images/share_twitter.png" width="32" height="32" border="0" alt="Tweet This Post" /></a>
 <a class="addthis_button_facebook"><img src="/wp-content/themes/seeded/images/share_facebook.png" width="32" height="32" border="0" alt="Share to Facebook" /></a>
-<a class="addthis_button_rss"><img src="/wp-content/themes/seeded/images/share_rss.png" width="32" height="32" border="0" alt="Share to Facebook" /></a>
+<a class="addthis_button_email"><img src="/wp-content/themes/seeded/images/email_rss.png" width="32" height="32" border="0" alt="Email this Post" /></a>
 
 </div>
 </div>

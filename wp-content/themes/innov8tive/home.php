@@ -43,6 +43,8 @@ function innov8tive_home_loop_helper() {
 		echo '<div id="home-bottom">';
 		
 			genesis_widget_area( 'home-bottom', array( 'before' => '<div class="wiget-area home-bottom">' ) );
+
+	
 		
 		echo '</div><!-- end #home-bottom -->';
 		

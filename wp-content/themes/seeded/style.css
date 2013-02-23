@@ -77,6 +77,10 @@ body{
    clear: both;
 }
 
+#text-3 {
+    float: right;
+}
+
 p {
     color:#505050;
 
@@ -260,10 +264,12 @@ color: #45738F;
 
 .custom_images {
     text-align: center;
-    margin-left: 6px;
+    margin-left: 0;
 }
 .custom_images a {
     margin-bottom: -5px;
+    width: 100%;
+    padding: 0!important;
 
 }
 
@@ -271,6 +277,37 @@ color: #45738F;
     background: url('images/category_tag.png') no-repeat left;
     padding-left: 25px;
     font-size: .9em;
+}
+
+.page-id-6524 #respond, .page-id-6532 #respond {
+    display: none;
+}
+
+.archive-page {
+    width: 100%;
+}
+
+.archive-page .cat-item {
+    float: right;
+    width: 215px;
+    list-style: none;
+    font-family: 'BloklettersViltstift';
+    font-style: normal;
+    font-weight: normal;
+    padding-top: 30px;
+}
+
+.archive-page .cat-item a {
+        text-decoration: none;
+
+}
+
+.archive-page img {
+    margin-bottom: 15px;
+}
+
+.page-template-archives-php .categories {
+    padding: 0;
 }
 
 h1#title {
@@ -316,6 +353,26 @@ padding-bottom: 15px;
     width: 585px;
 }
 
+
+.cse input.gsc-search-button, input.gsc-search-button  {
+    height: 27px!important;
+    margin-top: 0!important;
+    background: #E36D0B!important;
+    color: #fff!important;
+    border-radius: 15px!important;
+    border-width: 0!important;
+    box-shadow: none;
+    cursor: pointer;
+    padding: 10px;
+    width: auto;
+    color: #fff;
+    font-family: 'BloklettersViltstift'!important;
+    font-style: normal;
+    font-size: .8em;
+    font-weight: normal;
+    
+}
+
 /* 2. Navigation */
 
 #nav {
@@ -335,7 +392,7 @@ padding-bottom: 15px;
     font-style: normal;
     font-weight: normal;
     font-size: 1.15em;
-    padding: 7px 35px;
+    padding: 7px 40px;
 }
 
 
@@ -365,6 +422,18 @@ body.home li.noborderleft a {
     border-bottom:0;
 }
 
+
+.genesis-nav-menu li li a:hover {
+    color: #E36D0B;
+}
+
+.genesis-nav-menu li a:hover, .genesis-nav-menu li:hover a {
+color:#F5B818;
+}
+
+.genesis-nav-menu li li a {
+    text-shadow: none !important;
+}
 
 /* 3. Homepage Items */
 
@@ -486,6 +555,102 @@ body.page h1.entry-title {
     font-size: 1em;
     text-decoration: none;
 }
+
+
+.prev_next {
+    margin: 30px 0;
+    font-size: 0.8em;
+}
+
+.next > a {
+    float: right;
+    max-width: 35%;
+    background: url('images/next.png') no-repeat top right;
+    padding-right: 50px;
+    text-decoration: none;
+    min-height: 40px;
+}
+
+.prev > a{
+    float: left;
+    max-width: 35%;
+    background: url('images/prev.png') no-repeat top left;
+    padding-left: 50px;
+    text-decoration: none;
+    min-height: 40px;
+}
+
+.page .prev_next, .author .prev_next, .archive .prev_next, .search .prev_next {
+    display: none;
+}
+
+#categories-3 h2{
+    display: none;
+}
+
+#categories-3 ul li {
+    font-size: 16px;
+}
+
+.entry-content ul li, body.home .home-top ul li {
+    font-size: 0.8em;
+}
+
+body.home .home-top ul {
+    margin: 15px;
+}
+
+body.home .home-top ul li{
+    margin: 5px 0; 
+
+}
+
+body.home .entry, .page .post.entry {
+    margin-bottom:30px;
+}
+
+.more_recepies {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    width: 300px;
+    margin-bottom: 30px;
+}
+
+#blogherads {
+    margin: 0 auto;
+    width: 100%!important;
+}
+
+#blogherads li {
+    line-height: 1em;
+    margin-bottom: 0;
+}
+
+#blogherads a.bhaheadlines {
+    font-size: 0.8em!important;
+ }
+
+#_bapw-link {
+    float: right!important;
+}
+
+#blogherads iframe, #blogherads object, #blogherads img {
+    margin-left: 85px!important;
+}
+
+#blogherads li a {
+    font: inherit!important;
+    font-size: 0.8em!important;
+    text-decoration: none!important;
+    line-height: 1.2em;
+    margin: 0;
+    padding: 0 !important;
+    text-align: left !important;
+    width: 100%;
+}
+
+
 
 /* 5. Slider */
 
@@ -658,8 +823,12 @@ div#zlrecipe-container p{
 }
 
 #zlrecipe-container .img-desc-wrap {
-    background:url('images/blue_border.png') repeat-x bottom #ffffff!important;
-    padding-top: 1px;
+    background: url("images/blue_border.png") repeat-x scroll center bottom #F2F2F2 !important;
+    padding: 0 15px!important;
+}
+
+p.summary.italic {
+    font-style: normal!important;
 }
 
 #zlrecipe-container .img-desc-wrap #zlrecipe-summary {
@@ -691,6 +860,14 @@ p#zlrecipe-notes {
 
 #zlrecipe-container .heading-four, #zlrecipe-container .h-4 {
     font-size: 1em!important;
+}
+
+.ingredient {
+    font-size: 0.8em!important;
+}
+
+.ingredient-label {
+    font-size: 0.75em !important;
 }
 
 /* 8. Tabs */
@@ -792,7 +969,7 @@ li.ui-state-active a{
 
 #wp_page_numbers ul li a{
     padding:10px!important;
-     margin: 0 5px;
+     margin: 0;
 }
 
 #wp_page_numbers ul li a span {
@@ -840,7 +1017,7 @@ li.ui-state-active a{
 
 /* 10. Sidebar */
 
-#text-2, #text-8, #text-9, #text-10 {
+#text-2, #text-8, #text-9, #text-11{
     text-align: center;
 }
 
@@ -915,7 +1092,15 @@ h4.widgettitle {
     margin-bottom:0px;
 }
 
-input#enews {
+div.FeedburnerEmailWidget label {
+    display: block;
+    font-size: 0.9em;
+    line-height: 1.3em;
+    margin-left: 0;
+    padding: 15px;
+}
+
+input#enews, div.FeedburnerEmailWidget input[type="text"] {
     border-radius: 15px 0 0 15px;
     font-family: 'sofia_pro_lightregular';
     font-size: 0.9em;
@@ -925,7 +1110,7 @@ input#enews {
     width: 65%;
 }
 
-input#enews_submit {
+input#enews_submit, div.FeedburnerEmailWidget input[type="submit"]  {
     width: 35%;
     border-radius: 0 15px 15px 0;
     background: #e36d0b;
@@ -975,7 +1160,7 @@ button, input[type="button"], input[type="submit"], .btn {
     font-weight: normal;
 }
 
-button:hover, input[type="button"]:hover, input[type="submit"]:hover, .btn:hover, input#enews_submit:hover, a.button:hover {
+button:hover, input[type="button"]:hover, input[type="submit"]:hover, .btn:hover, input#enews_submit:hover, a.button:hover, div.FeedburnerEmailWidget input[type="submit"]:hover {
     background-color: #76933c;
     color: #F5B818;
 }
@@ -1061,4 +1246,18 @@ h3#reply-title {
     font-family: 'sofia_pro_lightregular';
     font-style: normal;
     font-weight: normal;
+}
+
+
+.enews input[type="submit"], .search-form input[type="submit"] {
+    height: inherit;
+    margin:15px 0;
+    overflow: hidden;
+    padding: 10px;
+    position: relative;
+    width: 100%;
+    font-family: 'BloklettersViltstift';
+    font-style: normal;
+    font-weight: normal;
+    color: #fff;
 }
