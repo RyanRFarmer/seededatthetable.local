@@ -24,15 +24,8 @@ do_action( 'genesis_meta' );
 wp_head(); /** we need this for plugins **/
 ?>
 
-<script>
-  (function() {
-    var cx = '014112805206070475644:bdvcn6xvneg';
-    var gcse = document.createElement('script'); gcse.type = 'text/javascript'; gcse.async = true;
-    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
-        '//www.google.com/cse/cse.js?cx=' + cx;
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(gcse, s);
-  })();
-</script>
+
+
 
 </head>
 <body <?php body_class(); ?>>

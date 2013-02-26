@@ -245,7 +245,7 @@ body.single .day {
 }
 
 div#home div.post p img, div.entry-content img {
-    border-bottom: 5px solid #E26F26;
+    /*border-bottom: 5px solid #E26F26;*/
 }
 
 #seeded_share {
