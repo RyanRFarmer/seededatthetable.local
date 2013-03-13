@@ -16,7 +16,10 @@
     License URI: http://www.opensource.org/licenses/gpl-license.php
 */
 
-@import url(../genesis/style.css);
+
+/*
+Removed for google performance
+@import url(../genesis/style.css);*/
 
 
 /* table of contents
@@ -160,11 +163,11 @@ a#logo {
 
 #content {
     padding: 0;
-    margin-top: 20px;
+    margin-top: 25px;
 }
 
 #content-sidebar-wrap {
-    padding: 20px 0;
+    padding: 15px 0 20px 0;
 }
 
 div#home .widget-wrap div#home_post_date p {
@@ -877,7 +880,7 @@ p#zlrecipe-notes {
 /* 8. Tabs */
 
 div.wp-tabs {
-    background: url('images/tabs_bg.png') no-repeat top!important;
+    background: url('http://www.seededatthetable.com/wp-content/themes/seeded/images/tabs_bg.png') no-repeat top!important;
 }
 
 .wp-tab-content {
@@ -943,7 +946,7 @@ li.ui-state-active a{
 }
 
 .sidebar .widget {
-    margin-bottom: 1.5rem;
+    margin-bottom: 20px;
     padding-bottom: 0;
 }
 

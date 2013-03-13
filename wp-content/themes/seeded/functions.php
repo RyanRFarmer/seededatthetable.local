@@ -81,7 +81,7 @@ function custom_search_button_text($text) {
 add_filter( 'genesis_post_info', 'post_info_filter' );
 function post_info_filter($post_info) {
 if ( !is_page() ) {
-    $post_info = '[post_date]<div id="authorship">by [post_author_posts_link] [post_comments zero="Comment" one="1 Comment" more="%"]</div> [post_edit]';
+    $post_info = '[post_date]<div id="authorship">by [post_author_posts_link] [post_comments zero="0" one="1 Comment" more="%"]</div> [post_edit]';
     return $post_info;
 }}
 

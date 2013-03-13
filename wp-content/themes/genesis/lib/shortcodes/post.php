@@ -204,7 +204,7 @@ function genesis_post_comments_shortcode( $atts ) {
 		'hide_if_off' => 'enabled',
 		'more'        => __( '% Comments', 'genesis' ),
 		'one'         => __( '1 Comment', 'genesis' ),
-		'zero'        => __( 'Leave a Comment', 'genesis' ),
+		'zero'        => __( '0', 'genesis' ),
 	);
 	$atts = shortcode_atts( $defaults, $atts );
 
